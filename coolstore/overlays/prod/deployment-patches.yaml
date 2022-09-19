@@ -1,0 +1,11 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web-ui
+  namespace: coolstore
+spec:
+  template:
+    spec:
+      containers:
+      - name: web-ui
+        image: "image-registry.openshift-image-registry.svc:5000/coolstore/web-ui:2022-09-19-07-46-53"

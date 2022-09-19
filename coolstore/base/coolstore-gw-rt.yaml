@@ -1,0 +1,16 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  annotations:
+    openshift.io/host.generated: "true"
+  labels:
+    app: coolstore-gw
+    demo: coolstore-microservice
+    template: coolstore
+  name: coolstore-gw
+spec:
+  to:
+    kind: Service
+    name: coolstore-gw
+    weight: 100
+  wildcardPolicy: None

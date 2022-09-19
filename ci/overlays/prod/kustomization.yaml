@@ -1,0 +1,11 @@
+bases:
+- ../../base
+patches:
+- patch: |-
+    - op: replace
+      path: "/spec/containers/0/env/2/value"
+      value: web-ui-coolstore.apps.cluster-prpzk-1.sandbox1037.opentlc.com
+  target:
+    kind: Pod
+    namespace: ci
+    name: sso-config-client
