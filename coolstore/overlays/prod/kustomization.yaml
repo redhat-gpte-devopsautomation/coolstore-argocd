@@ -1,4 +1,13 @@
 bases:
 - ../../base
 patches:
-- ./deployment-patches.yaml
+- target:
+    kind: Deployment
+    name: web-ui
+  patch: |-
+    - op: add
+      path: /spec/template/spec/containers/0/image
+      value: "image-registry.openshift-image-registry.svc:5000/coolstore/web-ui:2022-09-19-07-46-53"
+    - op: replace
+      path: /spec/template/spec/containers/0/env/2/value
+      value: https://secure-sso-ci.apps.cluster-prpzk-123.sandbox1037.opentlc.com/auth

@@ -28,8 +28,7 @@ spec:
         - name: HOSTNAME_HTTP
           value: 'web-ui:8080'
         - name: SSO_URL
-          value: >-
-            https://secure-sso-ci.apps.cluster-prpzk-1.sandbox1037.opentlc.com/auth
+          value: https://secure-sso-ci.apps.cluster-prpzk-1.sandbox1037.opentlc.com/auth
         - name: SSO_CLIENT_ID
           value: coolstore-web-ui
         - name: SSO_REALM
