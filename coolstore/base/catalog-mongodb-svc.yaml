@@ -7,13 +7,6 @@ metadata:
     template: coolstore
   name: catalog-mongodb
 spec:
-  clusterIP: 172.30.31.198
-  clusterIPs:
-  - 172.30.31.198
-  internalTrafficPolicy: Cluster
-  ipFamilies:
-  - IPv4
-  ipFamilyPolicy: SingleStack
   ports:
   - name: mongo
     port: 27017
