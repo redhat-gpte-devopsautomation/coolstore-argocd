@@ -11,3 +11,4 @@ resources:
 - sso-rt.yaml
 - sso-service-account-sa.yaml
 - sso-svc.yaml
+- sso-postgresql-pvc.yaml

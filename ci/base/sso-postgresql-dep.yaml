@@ -24,6 +24,10 @@ spec:
         deploymentConfig: sso-postgresql
       name: sso-postgresql
     spec:
+      volumes:
+        - name: postgresql-data
+          persistentVolumeClaim:
+            claimName: sso-postgresql
       containers:
       - env:
         - name: POSTGRESQL_USER
@@ -34,6 +38,9 @@ spec:
           value: coolstore
         image: image-registry.openshift-image-registry.svc:5000/openshift/postgresql
         imagePullPolicy: Always
+        volumeMounts:
+          - name: postgresql-data
+            mountPath: /var/lib/pgsql/data
         livenessProbe:
           failureThreshold: 3
           initialDelaySeconds: 30
