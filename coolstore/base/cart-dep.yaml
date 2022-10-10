@@ -33,7 +33,7 @@ spec:
           value: brmsAdmin
         - name: KIE_SERVER_PASSWORD
           value: vLcfkx3!
-        image: quay.io/redhat-gpte/cart
+        image: image-registry.openshift-image-registry.svc:5000/coolstore/cart
         imagePullPolicy: Always
         livenessProbe:
           failureThreshold: 10

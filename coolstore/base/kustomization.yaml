@@ -1,7 +1,7 @@
 namespace: coolstore
 resources:
 - anyuuid-rb.yaml
-- car-dep.yaml
+- cart-dep.yaml
 - cart-svc.yaml
 - catalog-dep.yaml
 - catalog-mongodb-dep.yaml
